@@ -1,4 +1,10 @@
-<%= image_tag "https://punchdrink.com/wp-content/uploads/2016/11/Slide-2-San-Francisco-Cocktail-Bar-Crawl-Tommys-Townhouse-Starlight-Room-Bar-Agricole-Rye.jpg", id: "home-banner" %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://punchdrink.com/wp-content/uploads/2016/11/Slide-2-San-Francisco-Cocktail-Bar-Crawl-Tommys-Townhouse-Starlight-Room-Bar-Agricole-Rye.jpg');">
+  <div class="banner-content">
+    <h1>Lucky Shaker</h1>
+    <p>Create exotic cocktails from the comfort of your home like a pro.</p>
+    <a class="btn btn-primary btn-lg">Explore</a>
+  </div>
+</div>
 
 <% @cocktails.each do |cocktail| %>
   <h1><%= link_to cocktail.name, cocktail_path(cocktail) %></h1>
