@@ -1,0 +1,9 @@
+<h1><%= @cocktail.name %></h1>
+<h2>To recreate this delicious drink you will need</h2>
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+    <li><%= dose.description %> of <%= dose.ingredient.name.downcase %></li>
+  <% end %>
+</ul>
+<p>Have an idea on how we could improve this drink?</p>
+<p>Do hesitate to let us know in the comment section...</p>

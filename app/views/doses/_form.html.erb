@@ -1,0 +1,5 @@
+<%= simple_form_for([cocktail, dose]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :description %>
+  <%= f.association :ingredient, colletion: Ingredient.all , prompt: "Choose from our ingredients list" %>
+<% end %>

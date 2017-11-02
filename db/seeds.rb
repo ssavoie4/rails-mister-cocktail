@@ -14,11 +14,24 @@ ingredients = JSON.parse(ingredients_serialized)
 
 puts "Cleaning database..."
 Ingredient.delete_all
+Cocktail.delete_all
 
 puts "Creating ingredients..."
 ingredients["drinks"].each do |ing|
   ingredient = Ingredient.new(name: ing["strIngredient1"])
   ingredient.save!
 end
+
+puts "Creating cocktails..."
+
+attributes = [
+  { name: "Mint Julep" },
+  { name: "Whiskey Sour" },
+  { name: "Mojito" },
+  { name: "Ceasar" },
+  { name: "White Russian" },
+]
+
+attributes.each { |attr| Cocktail.create(attr)}
 
 puts "Finished!"
