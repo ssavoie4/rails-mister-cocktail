@@ -2,10 +2,8 @@
 <h2>To recreate this delicious drink you will need</h2>
 <ul>
   <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.description %> of <%= dose.ingredient.name.downcase %></li>
+    <li><%= dose.description %> of <%= dose.ingredient.name.downcase %> <%= link_to "delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?"} %></li>
   <% end %>
 </ul>
 <h4>Add a doses:</h4>
 <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
-<p>Have an idea on how we could improve this drink?</p>
-<p>Do hesitate to let us know in the comment section...</p>

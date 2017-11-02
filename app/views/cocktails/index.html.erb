@@ -6,8 +6,18 @@
   </div>
 </div>
 
-<% @cocktails.each do |cocktail| %>
-  <h1><%= link_to cocktail.name, cocktail_path(cocktail) %></h1>
-<% end %>
+<div class="container">
+  <div class="row">
+    <h4 class="divider text-center">
+      <span class="sans">COCKTAILS</span>
+    </h4>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <% @cocktails.each do |cocktail| %>
+          <h1><%= link_to cocktail.name, cocktail_path(cocktail) %></h1>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to "create a new cocktail", new_cocktail_path %>
