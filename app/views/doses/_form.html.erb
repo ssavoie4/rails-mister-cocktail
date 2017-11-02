@@ -2,4 +2,5 @@
   <%= f.error_notification %>
   <%= f.input :description %>
   <%= f.association :ingredient, colletion: Ingredient.all , prompt: "Choose from our ingredients list" %>
+  <%= f.submit %>
 <% end %>

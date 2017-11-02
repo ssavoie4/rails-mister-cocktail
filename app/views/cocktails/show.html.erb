@@ -5,5 +5,7 @@
     <li><%= dose.description %> of <%= dose.ingredient.name.downcase %></li>
   <% end %>
 </ul>
+<h4>Add a doses:</h4>
+<%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
 <p>Have an idea on how we could improve this drink?</p>
 <p>Do hesitate to let us know in the comment section...</p>

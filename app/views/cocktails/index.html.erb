@@ -1,3 +1,5 @@
+<%= image_tag "https://punchdrink.com/wp-content/uploads/2016/11/Slide-2-San-Francisco-Cocktail-Bar-Crawl-Tommys-Townhouse-Starlight-Room-Bar-Agricole-Rye.jpg", id: "home-banner" %>
+
 <% @cocktails.each do |cocktail| %>
   <h1><%= link_to cocktail.name, cocktail_path(cocktail) %></h1>
 <% end %>
