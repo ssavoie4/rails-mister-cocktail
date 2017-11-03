@@ -1,0 +1,25 @@
+.header-banner {
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.header-img {
+  flex: 0 0 20%;
+  padding: 5px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.header-name {
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: white;
+  align-self: flex-end;
+}
