@@ -1,8 +1,8 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://punchdrink.com/wp-content/uploads/2016/11/Slide-2-San-Francisco-Cocktail-Bar-Crawl-Tommys-Townhouse-Starlight-Room-Bar-Agricole-Rye.jpg');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(69, 67, 57, 0.6) 0%, rgba(37, 37, 31, 0.6) 50%), url('https://punchdrink.com/wp-content/uploads/2016/11/Slide-2-San-Francisco-Cocktail-Bar-Crawl-Tommys-Townhouse-Starlight-Room-Bar-Agricole-Rye.jpg');">
   <div class="banner-content">
     <h1>Lucky Shaker</h1>
-    <p>Create exotic cocktails from the comfort of your home like a pro.</p>
-    <a class="btn btn-primary btn-lg">Explore</a>
+    <p>Create exotic cocktails from the comfort of your home <em>like a pro</em></p>
+    <a class="btn btn-info btn-lg" id="btn-banner">Explore</a>
   </div>
 </div>
 
@@ -11,13 +11,18 @@
     <h4 class="divider text-center">
       <span class="sans">COCKTAILS</span>
     </h4>
-    <div class="col-xs-12 col-sm-4">
-      <div class="card">
         <% @cocktails.each do |cocktail| %>
-          <h1><%= link_to cocktail.name, cocktail_path(cocktail) %></h1>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card text-center">
+              <% if cocktail.photo? %>
+                <%= cl_image_tag cocktail.photo.path, width: 500, height: 500, crop: :fill, class: "card-img" %>
+              <% end %>
+              <div class="card-name">
+                <%= link_to cocktail.name, cocktail_path(cocktail), class: "card-link" %>
+              </div>
+            </div>
+          </div>
         <% end %>
-      </div>
-    </div>
   </div>
 </div>
 
