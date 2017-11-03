@@ -1,5 +1,5 @@
 .header-banner {
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .header-content {
@@ -17,9 +17,14 @@
 
 .header-name {
   flex: 1 0 auto;
-  margin: 0;
+  margin: 0 20px;
   padding: 0;
   text-transform: uppercase;
   color: white;
   align-self: flex-end;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+}
+
+.btn-x {
+  color: #B0D0D3;
 }
