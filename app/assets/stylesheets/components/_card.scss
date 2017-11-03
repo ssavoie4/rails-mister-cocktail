@@ -22,4 +22,8 @@
   font-size: .8em;
   letter-spacing: 2px;
   color: #CCCCCC;
+  &:hover {
+    text-decoration: none;
+    color: #B0D0D3;
+  }
 }
